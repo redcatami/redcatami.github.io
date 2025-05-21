@@ -13,11 +13,11 @@
 # you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Just the Docs
-description: A Jekyll theme for documentation
+title: redcatami notes
+description: This blog serves as a personal knowledge repository where I document technical insights, tools, techniques, and research findings across cybersecurity, system administration, and emerging technologies like AI. The goal is to capture information I find useful, interesting, or practically applicable — both as a reference for future problem-solving and as a way to reinforce continuous learning. Whether it’s a command-line trick, a security concept, a script, or a link to a deeper resource, this space is my way of turning day-to-day exploration into lasting knowledge.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://just-the-docs.com" # the base hostname & protocol for your site, e.g. http://example.com
-repository: just-the-docs/just-the-docs # for github-metadata
+url: "redcatami@github.io" # the base hostname & protocol for your site, e.g. http://example.com
+
 
 permalink: pretty
 
