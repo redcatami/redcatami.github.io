@@ -18,7 +18,7 @@ description: This blog serves as a personal knowledge repository where I documen
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "redcatami@github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
-
+favicon_ico: "/assets/images/favicon.ico"
 permalink: pretty
 
 defaults:
