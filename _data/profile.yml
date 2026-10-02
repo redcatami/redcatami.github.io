@@ -1,0 +1,19 @@
+name: Redcatech
+handle: redcatami
+headline: "Curiosity, turned into something useful."
+intro: "A personal space for projects, notes, and the things I learn along the way."
+bio: "I’m the person behind Redcatech. This is where I share the things I build, the ideas I explore, and the next steps in my career."
+career: []
+socials:
+  - label: GitHub
+    url: https://github.com/redcatami
+  - label: Instagram
+    url: ""
+  - label: X
+    url: ""
+  - label: TikTok
+    url: ""
+  - label: YouTube
+    url: ""
+  - label: Telegram
+    url: ""

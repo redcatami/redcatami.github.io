@@ -1,0 +1,43 @@
+title: Redcatech
+description: "Projects, ideas, and a career in technology."
+url: "https://redcatami.github.io"
+baseurl: ""
+lang: en
+timezone: America/Chicago
+markdown: kramdown
+permalink: /journal/:title/
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: article
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .tools
+  - .bundle
+  - examples
+  - scripts
+  - node_modules
+  - package.json
+  - package-lock.json
+  - Redcatech-source.zip

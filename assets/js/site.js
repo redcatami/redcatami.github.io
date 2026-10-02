@@ -1,0 +1,1 @@
+document.querySelectorAll('a[href="#main"]').forEach(link=>link.addEventListener('click',()=>{const main=document.getElementById('main');main.setAttribute('tabindex','-1');main.focus({preventScroll:true})}));

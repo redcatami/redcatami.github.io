@@ -1,0 +1,9 @@
+---
+title: About & Career
+section: about
+permalink: /about/
+description: The person, projects, and career behind Redcatech.
+---
+<section class="page-intro wrap"><span class="eyebrow">BEHIND REDCATECH</span><h1>A little about<br><span>the person building.</span></h1><p>{{ site.data.profile.bio | escape }}</p></section>
+<section class="about-content wrap"><div class="side-label eyebrow">01 / ABOUT ME</div><div class="prose"><h2>More than a finished project.</h2><p>I’m interested in what happens between an idea and something people can actually use: the experiments, the decisions, and the lessons that come with building.</p><p>Redcatech brings that work together in one place. You’ll find my projects here, along with notes about the things I’m learning.</p><a class="text-link" href="{{ '/projects/' | relative_url }}">See what I’m working on</a></div></section>
+<section class="about-content wrap"><div class="side-label eyebrow">02 / MY CAREER</div><div class="prose"><h2>The journey so far.</h2>{% if site.data.profile.career.size > 0 %}{% for role in site.data.profile.career %}<article class="career-row"><span class="mono">{{ role.period | escape }}</span><h3>{{ role.title | escape }}</h3><p class="blue">{{ role.company | escape }}</p><p>{{ role.description | escape }}</p></article>{% endfor %}{% else %}<p>My career story will be shared here soon.</p>{% endif %}</div></section>
