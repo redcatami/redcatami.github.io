@@ -19,6 +19,27 @@ function move(direction) {
 }
 previous.addEventListener('click', () => move(-1));
 next.addEventListener('click', () => move(1));
+// Translate vertical wheel input into horizontal movement while over the badges.
+// Leave horizontal trackpad gestures and browser zoom to their native handlers.
+let wheelTimer;
+track.addEventListener('wheel', event => {
+  if (event.ctrlKey || event.metaKey || Math.abs(event.deltaX) >= Math.abs(event.deltaY)) return;
+  const max = track.scrollWidth - track.clientWidth;
+  const delta = event.deltaY * (event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? track.clientWidth : 1);
+  if (!delta || max <= 0 || (delta < 0 && track.scrollLeft <= 1) || (delta > 0 && track.scrollLeft >= max - 1)) return;
+  event.preventDefault();
+  // Avoid snapping back between the small increments emitted by a mouse wheel.
+  track.style.scrollSnapType = 'none';
+  track.scrollBy({ left: delta, behavior: 'instant' });
+  clearTimeout(wheelTimer);
+  wheelTimer = setTimeout(() => {
+    const step = cards[0].getBoundingClientRect().width + 18;
+    const index = delta > 0 ? Math.ceil(track.scrollLeft / step) : Math.floor(track.scrollLeft / step);
+    track.scrollTo({ left: Math.min(max, Math.max(0, index * step)), behavior: 'instant' });
+    track.style.removeProperty('scroll-snap-type');
+    updateControls();
+  }, 180);
+}, { passive: false });
 track.addEventListener('keydown', event => {
   if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
     event.preventDefault();
