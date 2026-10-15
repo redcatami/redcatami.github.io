@@ -1,9 +1,0 @@
-_site/
-.jekyll-cache/
-.jekyll-metadata
-.sass-cache/
-.bundle/
-.tools/
-vendor/
-node_modules/
-Redcatech-source.zip

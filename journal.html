@@ -1,7 +1,0 @@
----
-title: Journal
-section: journal
-permalink: /journal/
-description: Notes on technology, projects, and lessons learned along the way.
----
-<section class="page-intro wrap"><span class="eyebrow">THE JOURNAL</span><h1>Notes from<br><span>along the way.</span></h1><p>Technology, experiments, and lessons learned. A place to think things through and share what sticks.</p></section><section class="section wrap"><div class="list-heading"><h2>Latest writing</h2><span>{{ site.posts.size }} {% if site.posts.size == 1 %}article{% else %}articles{% endif %}</span></div>{% for post in site.posts %}{% include post-row.html %}{% else %}<div class="empty-state"><h3>The first page is still unwritten.</h3><p>New articles and project notes will appear here as I publish them.</p></div>{% endfor %}</section>

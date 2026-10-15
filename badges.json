@@ -1,0 +1,78 @@
+{
+  "source": "https://www.credly.com/users/stanislav-kvitko.67c29f61/badges/credly",
+  "checked": "2026-10-15",
+  "badges": [
+    {
+      "name": "CompTIA A+ ce Certification",
+      "issuer": "CompTIA",
+      "type": "Certification",
+      "date": "Expires Sep 9, 2028",
+      "url": "https://www.credly.com/badges/4f81eb1e-b17f-496d-8d7d-520ca6a90ebc",
+      "image": "https://images.credly.com/size/128x128/images/f6d62c5d-1e1d-4de6-92ee-8dc8c80b1c7b/blob"
+    },
+    {
+      "name": "CompTIA Network+ ce Certification",
+      "issuer": "CompTIA",
+      "type": "Certification",
+      "date": "Expires Sep 9, 2028",
+      "url": "https://www.credly.com/badges/6eefdad4-a248-4b53-a10a-3bdd7a7665b0",
+      "image": "https://images.credly.com/size/128x128/images/c70ba73e-3c8a-46fa-9d60-4a9af94ad662/blob"
+    },
+    {
+      "name": "CompTIA Security+ ce Certification",
+      "issuer": "CompTIA",
+      "type": "Certification",
+      "date": "Expires Jun 4, 2027",
+      "url": "https://www.credly.com/badges/002fb8e7-4ff1-4e1b-8030-627bc24000d5",
+      "image": "https://images.credly.com/size/128x128/images/80d8a06a-c384-42bf-ad36-db81bce5adce/blob"
+    },
+    {
+      "name": "Microsoft Certified: Azure Fundamentals",
+      "issuer": "Microsoft",
+      "type": "Certification · AZ-900",
+      "date": "Issued Nov 8, 2025",
+      "url": "https://www.credly.com/badges/70e11884-baf7-403f-9ed8-d67c08775a81",
+      "image": "https://images.credly.com/size/128x128/images/be8fcaeb-c769-4858-b567-ffaaa73ce8cf/image.png"
+    },
+    {
+      "name": "Certified in Cybersecurity (CC)",
+      "issuer": "ISC2",
+      "type": "Certification",
+      "date": "Expires Feb 28, 2027",
+      "url": "https://www.credly.com/badges/a6d3e99d-e198-40ee-889c-a0a934a5271f",
+      "image": "https://images.credly.com/size/128x128/images/2030e43f-8003-4d4b-9630-847add403c87/image.png"
+    },
+    {
+      "name": "CompTIA IT Operations Specialist – CIOS Stackable Certification",
+      "issuer": "CompTIA",
+      "type": "Stackable credential",
+      "date": "Expires Sep 9, 2028",
+      "url": "https://www.credly.com/badges/aa35b9f1-f0dc-4a80-a14d-ecf2b1a197bc",
+      "image": "https://images.credly.com/size/128x128/images/7f7657b9-4d1b-4b8d-b5ee-5fdf6d7ccd71/04294_CompTIA_Cert_Badges_Specialist_-_CIOS.png"
+    },
+    {
+      "name": "CompTIA Secure Infrastructure Specialist – CSIS Stackable Certification",
+      "issuer": "CompTIA",
+      "type": "Stackable credential",
+      "date": "Expires Jun 4, 2027",
+      "url": "https://www.credly.com/badges/6303f1fb-fd88-468c-b395-dd042dc00e97",
+      "image": "https://images.credly.com/size/128x128/images/8090280a-311f-425f-a1cd-a32770b5a444/CompTIA_CSIS.png"
+    },
+    {
+      "name": "APISEC|CON 2025 - Certificate of Attendance - 6 hours",
+      "issuer": "APIsec University",
+      "type": "Conference attendance",
+      "date": "Issued Mar 22, 2025",
+      "url": "https://www.credly.com/badges/4a3b295a-2a7c-49ea-a2d9-b07e5c27221e",
+      "image": "https://images.credly.com/size/128x128/images/17d05554-6a2e-46c0-9b33-4cd68153facf/blob"
+    },
+    {
+      "name": "ISC2 Candidate",
+      "issuer": "ISC2",
+      "type": "Historical · Expired",
+      "date": "Expired Feb 5, 2024",
+      "url": "https://www.credly.com/badges/edab2eed-f16f-486b-a294-7b54bf39ce08",
+      "image": "https://images.credly.com/size/128x128/images/9180921d-4a13-429e-9357-6f9706a554f0/image.png"
+    }
+  ]
+}

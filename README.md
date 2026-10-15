@@ -1,61 +1,44 @@
-# Redcatech
+# Redcatami — personal brand website
 
-A custom Jekyll portfolio for redcatami, built for GitHub Pages. No WordPress, public registration, passwords, or browser-based publishing endpoint. Visitors can read the site; only people authorized to change your GitHub repository can publish changes.
+A responsive, build-free website for Stanislav Kvitko (Redcatami), ready for GitHub Pages. Includes nine public Credly badges, a scrollable carousel, individual badge links, and a clickable TryHackMe profile icon.
 
-## Publish to GitHub Pages
+## Deploy on GitHub Pages
 
-1. Create a repository named **redcatami.github.io** under your GitHub account. Do not overwrite an existing repository.
-2. Upload the site source files, including the `.github/workflows` directory. Do not upload `.tools`, `vendor`, `_site`, or credentials.
-3. Set the default branch to `main`.
-4. Open **Settings → Pages** and choose **GitHub Actions** as the build source.
-5. Run **Build and deploy Redcatech** in Actions, or push a change to `main`.
-6. After deployment succeeds, your site will be at `https://redcatami.github.io`.
+1. Extract the ZIP. Upload the **contents** of `redcatami/` to the root of your GitHub repository (so `index.html` is at the repository root).
+2. Commit the files to your `main` branch.
+3. In the repository, open **Settings → Pages**.
+4. Under **Build and deployment**, select **GitHub Actions**. The included `.github/workflows/pages.yml` publishes the static website on pushes to `main`.
+5. Wait for GitHub's Pages deployment to finish. Open the URL shown in the Pages settings.
 
-The workflow also supports project repositories: it gets the correct base path from GitHub Pages. If you use a different repository name, its published address will include that name.
+Published from the root of `redcatami/redcatami.github.io` to https://redcatami.github.io/. All local assets use relative paths, so the files also work on a project repository site. No build command, package installation, API key, or server is required.
 
-## Make it yours
+## Preview
 
-- Edit `_data/profile.yml` for your name, introduction, biography, and social URLs. Blank social URLs display as “Coming soon” and do not create misleading links.
-- Edit `about.html` for your personal story. The initial prose is editable introductory copy, not a verified biography.
-- Add career entries to `career` in `_data/profile.yml`:
+Open `index.html` directly in a browser, or serve this folder with any static web server. The website does not fetch JSON at runtime and works from a local file. Internet access is needed for the original badge images and outbound profiles.
 
-```yaml
-career:
-  - period: "2024–present"
-    title: "Your role"
-    company: "Your employer"
-    description: "Your responsibilities and achievements."
-```
+## Files
 
-- Copy `examples/project.md` to `_projects/project-name.md`, replace the sample fields, and commit. Create `_projects` if needed.
-- Copy `examples/article.md` to `_posts/YYYY-MM-DD-article-name.md`, replace the content, and commit. Create `_posts` if needed. Use a past or current date; future posts are not published automatically.
-- Add screenshots to `assets/images/` and set `image` and `image_alt` on the project. Avoid putting private data in screenshots.
-- Draft articles can live in `_drafts/` and are omitted from the published site. A public GitHub repository still exposes their source, so do not store confidential drafts there.
-- Set `published: false` in a project or post to omit it from the site. Its source remains visible if the repository is public.
+- `index.html` — all content and badge cards; fully usable without JavaScript
+- `styles.css` — responsive layout, visual identity, reduced-motion support
+- `script.js` — carousel buttons, keyboard navigation, image fallback, footer year
+- `assets/mark.svg` — original Redcatami cat mark and favicon
+- `badges.json` — reference snapshot of verified badge names, dates, artwork, and destinations; **not a runtime data source**
+- `.nojekyll` — tells GitHub Pages to serve static files directly
 
-No fictional projects, jobs, or social accounts have been published. The empty portfolio and journal states are intentional until you add real content.
+## Credential sources and accuracy
 
-## Local development
+Reviewed the rendered public [Credly profile](https://www.credly.com/users/stanislav-kvitko.67c29f61/badges/credly) on **October 15, 2026**. All nine card destinations and artwork URLs were extracted from the profile's public badge cards. No badge IDs were guessed. Microsoft Azure Fundamentals is labeled AZ-900 as requested by the owner. No scores, job history, professional experience, project accomplishments, or TryHackMe rankings are claimed.
 
-Install Ruby 3.3 and Bundler, then run:
+The collection contains CompTIA A+, Network+, Security+, Microsoft Azure Fundamentals, ISC2 CC, CompTIA CIOS and CSIS stackable credentials, APISEC|CON 2025 attendance, and the historical ISC2 Candidate badge. **ISC2 Candidate expired February 5, 2024** and is explicitly marked expired. Conference attendance is not presented as certification. Dates are a static snapshot, not a live validity check; review them periodically against Credly.
 
-```sh
-bundle install
-bundle exec jekyll serve --host 127.0.0.1
-```
+TryHackMe points to the exact owner-supplied [Redcatami profile](https://tryhackme.com/p/redcatami). Its icon is an original cloud/terminal illustration, not an official TryHackMe logo. Credential images are original images hosted by Credly and belong to their respective issuers. The site is not affiliated with those issuers.
 
-Open `http://127.0.0.1:4000`. Restart Jekyll after changing `_config.yml`.
+## Update content
 
-Production build:
+Edit the badge anchors in `index.html`, and keep the reference snapshot in `badges.json` in sync. For a new badge, verify its public record on the owner's Credly profile before adding its name, artwork, and individual URL. If an individual URL cannot be verified, use the profile URL above. Do not invent UUIDs. Update the review date whenever you review the credential collection.
 
-```sh
-JEKYLL_ENV=production bundle exec jekyll build
-```
+Badge artwork loads from `images.credly.com`, with a readable text fallback if an image fails. There are no analytics, tracking scripts, embedded third-party widgets, remote fonts, or live API dependencies. External links open in a new tab with `noopener noreferrer`.
 
-On PowerShell, use `$env:JEKYLL_ENV='production'` before the build command.
+## Accessibility and interaction
 
-## Account security
-
-Use a passkey or two-factor authentication on GitHub, avoid unnecessary repository collaborators, and never commit tokens or credentials. There is no public form that allows visitors to create projects or posts. Static hosting does not process untrusted submissions. Markdown is trusted author content, so review contributions before merging.
-
-The GitHub Actions workflow grants deployment permission only to its automation token. The local site is prepared; it is not live until uploaded and its deployment succeeds.
+The carousel supports horizontal touch scrolling, a native scrollbar, Previous/Next buttons, keyboard arrows while focused, and ordinary Tab navigation to every badge. It does not autoplay. Reduced-motion preferences disable animated scrolling. Navigation, focus indicators, headings, a skip link, descriptive link names, and image alternatives are included. Without JavaScript, all badge links and native scrolling remain available.

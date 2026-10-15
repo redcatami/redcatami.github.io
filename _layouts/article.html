@@ -1,4 +1,0 @@
----
-layout: default
----
-<article class="article wrap"><a class="quiet-link" href="{{ '/journal/' | relative_url }}">Back to journal</a><div class="article-heading"><span class="eyebrow">{{ page.category | default: 'Notes' | escape }}</span><h1>{{ page.title | escape }}</h1><div class="mono"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %d, %Y' }}</time> · {{ content | number_of_words | divided_by: 220 | plus: 1 }} min read</div>{% if page.description %}<p class="lead">{{ page.description | escape }}</p>{% endif %}</div><div class="prose article-body">{{ content }}</div></article>
